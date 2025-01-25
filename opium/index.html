@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YZYCRAFT Video Page</title>
+
+    <!-- Import HelveticaLT font from the local path -->
+    <style>
+        @font-face {
+            font-family: 'HelveticaTL';
+            src: url('HelveticaLTStd-BoldCond.otf') format('opentype');
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh; /* Full viewport height */
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Center content vertically */
+            align-items: center; /* Center content horizontally */
+            background-color: black;
+            color: white;
+            font-family: 'HelveticaTL', sans-serif;
+            position: relative;
+            overflow: hidden;
+        }
+
+        video {
+            width: 40%; /* Scale the video down to 40% width on desktop */
+            height: auto; /* Ensure the aspect ratio is maintained */
+            object-fit: contain; /* Ensure the video fits within the container */
+            pointer-events: none; /* Disable user interaction */
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 10px;
+            text-align: center;
+            font-size: 14px;
+            padding: 10px;
+            z-index: 10;
+            width: 100%;
+            color: white;
+        }
+
+        /* On mobile (iPhones), adjust video display */
+        @media screen and (max-width: 768px) {
+            video {
+                width: 90%; /* Scale video to 90% for mobile */
+                height: auto; /* Auto height for vertical video */
+                max-width: 100%; /* Ensure video is scaled down to fit the screen */
+                max-height: 90%; /* Prevent overflow on small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Video element, automatically selects the correct video source -->
+    <video autoplay muted loop playsinline id="video">
+        <source id="video-source" src="https://cache.umusic.com/_sites/p1b1c134679/desktop.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Footer Text -->
+    <div class="footer">
+        2025 YZYCRAFT - I AM MUSIC
+    </div>
+
+    <script>
+        // Change video source for mobile (iPhones or small screens)
+        if (window.innerWidth <= 768) {
+            const videoSource = document.getElementById('video-source');
+            videoSource.src = 'https://cache.umusic.com/_sites/p1b1c134679/mobile.mp4';
+            const video = document.getElementById('video');
+            video.load(); // Reload video to apply the new source
+        }
+    </script>
+</body>
+</html>
