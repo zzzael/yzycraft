@@ -1,50 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2025 YZYCRAFT</title>
-    <link rel="icon" type="image/png" sizes="512x512" href="favicon.png">
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #1E1E1E;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            font-family: "Zurich", sans-serif;
-        }
+<link rel="icon" href="favicon.png" type="image/png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta itemprop="name" content="YZYCRAFT" />
+  <meta itemprop="description" content="" />
+  <meta itemprop="image" content="https://media.discordapp.net/attachments/1329860091440140421/1335634215307444354/azaza.gif?ex=67a0e1cb&is=679f904b&hm=897b67d9c094c26959f51ea8b0d5d6319990f1ffdf5de223e8822119da246abc&=" />
+  
+  <!-- Facebook Meta Tags -->
+  <meta property="og:url" content="https://yzycraft.co.uk/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="YZYCRAFT" />
+  <meta property="og:description" content="" />
+  <meta property="og:image" content="https://media.discordapp.net/attachments/1329860091440140421/1335634215307444354/azaza.gif?ex=67a0e1cb&is=679f904b&hm=897b67d9c094c26959f51ea8b0d5d6319990f1ffdf5de223e8822119da246abc&=" />
+  
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="YZYCRAFT" />
+  <meta name="twitter:description" content="" />
+  <meta name="twitter:image" content="https://media.discordapp.net/attachments/1329860091440140421/1335634215307444354/azaza.gif?ex=67a0e1cb&is=679f904b&hm=897b67d9c094c26959f51ea8b0d5d6319990f1ffdf5de223e8822119da246abc&=" />  
+  <title>YZYCRAFT</title>
+  <style>
+    /* Import the SF Pro font locally */
+    @font-face {
+      font-family: 'SF Pro';
+      src: url('sfpro.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
 
-        img {
-            max-width: 90%;
-            max-height: 90%;
-            margin: auto;
-        }
+    /* Reset default margin and padding */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        footer {
-            color: white;
-            font-size: 18px;
-            padding: 20px;
-            font-smooth: always;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            text-align: center;
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-        }
+    /* Center everything on the page */
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      font-family: 'SF Pro', sans-serif;
+      background-color: #f0f0f0;
+      text-align: center;
+    }
 
-        @font-face {
-            font-family: "Zurich";
-            src: url("zurich.ttf") format("truetype");
-        }
-    </style>
+    /* Style for the GIF */
+    .gif {
+      width: 160px;
+      height: 160px;
+      margin-top: 20px;
+    }
+
+    /* Style for the text container */
+    .text {
+      margin-top: 20px;
+      line-height: 1.6;
+      font-size: 1.2rem;
+      color: #333;
+    }
+
+    /* Responsive scaling */
+    @media (max-width: 768px) {
+      .text {
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .text {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
 </head>
 <body>
-    <img src="thereturn.png" alt="The Return">
-    <footer>2025 YZYCRAFT</footer>
+  <div class="container">
+    <img src="vultworld.gif" alt="Vultworld GIF" class="gif">
+    <div class="text">
+      <p>YZYCRAFT is currently working on something awesome. Stay tuned</p>
+    </div>
+  </div>
 </body>
 </html>
