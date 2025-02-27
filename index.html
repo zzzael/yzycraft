@@ -1,97 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YZYCRAFT EVENT</title>
-    <meta name="description" content="YEEZY POP-UP NO CRACKED CLIENTS" />
-    <meta itemprop="name" content="YZYCRAFT - EVENT" />
-    <meta itemprop="description" content="YEEZY POP-UP NO CRACKED CLIENTS" />
-    <meta itemprop="image" content="https://media.discordapp.net/attachments/1291627994942804051/1341989117097152593/image.png?ex=67b80042&amp;is=67b6aec2&amp;hm=c3a6d508acac98880bc1d82d63a59913ec41e6a0487ee555d46da074579bbbb5&amp;=&amp..." />
-    <meta property="og:url" content="https://yzycraft.co.uk/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="YZYCRAFT - EVENT" />
-    <meta property="og:description" content="YEEZY POP-UP NO CRACKED CLIENTS" />
-    <meta property="og:image" content="https://media.discordapp.net/attachments/1291627994942804051/1341989117097152593/image.png?ex=67b80042&amp;is=67b6aec2&amp;hm=c3a6d508acac98880bc1d82d63a59913ec41e6a0487ee555d46da074579bbbb5&amp;=&amp..." />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="YZYCRAFT - EVENT" />
-    <meta name="twitter:description" content="YEEZY POP-UP NO CRACKED CLIENTS" />
-    <meta name="twitter:image" content="https://media.discordapp.net/attachments/1291627994942804051/1341989117097152593/image.png?ex=67b80042&amp;is=67b6aec2&amp;hm=c3a6d508acac98880bc1d82d63a59913ec41e6a0487ee555d46da074579bbbb5&amp;=&amp..." />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="assets/img/favicon/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
+    <link href="assets/img/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
+    <link href="assets/img/favicon/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png" />
+    <link href="assets/img/favicon/apple-touch-icon.png" rel="shortcut icon" type="image/x-icon" />
+    <link href="assets/img/favicon/site.html" rel="manifest" />
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <title>YZYCRAFT.CO.UK</title>
     <style>
-        @font-face {
-            font-family: 'Helvetica';
-            src: url('helv.ttf') format('truetype');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-
         body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            background-color: #ffffff;
+        }
+        .content {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #000000;  /* Black background */
-            color: white;  /* White text */
-            text-align: center;
-            font-family: 'Helvetica', sans-serif;
+            flex-grow: 1;
+            width: 100%;
+            max-width: 100vw;
+            max-height: 100vh;
+            padding: 10px; /* Prevents image from touching edges */
         }
-
-        .content {
-            position: relative;
-        }
-
         img {
-            width: 366px;
-            height: 238px;
-            display: block;
-            margin: 0 auto;
-        }
-
-        .text {
-            font-size: 17px;
-            margin-top: 20px;
-        }
-
-        .timer {
-            font-size: 17px;
-            margin-top: 10px;
-            font-weight: bold;
+            width: 100%;
+            height: 100%;
+            max-width: 90vw;
+            max-height: 90vh;
+            object-fit: contain; /* Ensures no distortion */
         }
     </style>
 </head>
 <body>
+    <!-- header start -->
+    <header class="header">
+        <div class="header-wrapper">
+            <button type="button" title="menu-toggle" class="menu-toggle">
+                <span class="menu-toggle-bar"></span>
+                <span class="menu-toggle-bar"></span>
+            </button>
+            <nav class="header-nav">
+                <a href="index.html" class="nav-link">home</a>
+                <a href="enter.html" class="nav-link">vault</a>
+            </nav>
+        </div>
+    </header>
+    <!-- header end -->
+
     <div class="content">
-        <img src="dove.png" alt="Dove Image">
-        <div class="text">YZY POP-UP EVENT</div>
-        <div class="text">FT. YE & TY @ YZY MELROSE</div>
-        <div class="timer" id="countdown"></div>
+        <img src="image.png" alt="Centered Image">
     </div>
 
-    <script>
-        // Set the target date and time for Saturday, 22nd at 1 AM GMT
-        var targetDate = new Date("2025-02-21T01:01:30Z");
-
-        function updateCountdown() {
-            var now = new Date();
-            var timeRemaining = targetDate - now;
-
-            if (timeRemaining <= 0) {
-                document.getElementById('countdown').innerHTML = "EVENT DELAYED BY 30 MINUTES";
-                return;
-            }
-
-            var hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
-
-            // Format single digits as two digits (e.g., "04" instead of "4")
-            hours = hours < 10 ? "0" + hours : hours;
-            minutes = minutes < 10 ? "0" + minutes : minutes;
-            seconds = seconds < 10 ? "0" + seconds : seconds;
-
-            document.getElementById('countdown').innerHTML = hours + " : " + minutes + " : " + seconds;
-        }
-
-        setInterval(updateCountdown, 1000);
-    </script>
+    <!-- Scripts -->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
