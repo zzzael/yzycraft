@@ -14,17 +14,18 @@
 
     <meta itemprop="name" content="" />
     <meta itemprop="description" content="" />
-    <meta itemprop="image" content="https://media.discordapp.net/attachments/1342980937104887938/1344788886970433596/image.png?ex=67c22fbf&amp;is=67c0de3f&amp;hm=3b1fd7d7fefa7785be4a89d84c1b9f8454bf986fc8e27b4f75f23cf6257ca78d&amp;=&amp..." />
+    <meta itemprop="image" content="https://media.discordapp.net/attachments/1342980937104887938/1344788886970433596/image.png" />
 
     <meta property="og:url" content="https://yzycraft.co.uk/" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="" />
     <meta property="og:description" content="" />
-    <meta property="og:image" content="https://media.discordapp.net/attachments/1342980937104887938/1344788886970433596/image.png?ex=67c22fbf&amp;is=67c0de3f&amp;hm=3b1fd7d7fefa7785be4a89d84c1b9f8454bf986fc8e27b4f75f23cf6257ca78d&amp;=&amp..." />
+    <meta property="og:image" content="https://media.discordapp.net/attachments/1342980937104887938/1344788886970433596/image.png" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="" />
     <meta name="twitter:description" content="" />
-    <meta name="twitter:image" content="https://media.discordapp.net/attachments/1342980937104887938/1344788886970433596/image.png?ex=67c22fbf&amp;is=67c0de3f&amp;hm=3b1fd7d7fefa7785be4a89d84c1b9f8454bf986fc8e27b4f75f23cf6257ca78d&amp;=&amp..." />
+    <meta name="twitter:image" content="https://media.discordapp.net/attachments/1342980937104887938/1344788886970433596/image.png" />
+
     <style>
         * {
             margin: 0;
@@ -54,6 +55,7 @@
             max-width: 90vw;
             max-height: 90vh;
             object-fit: contain; /* Ensures no distortion */
+            cursor: pointer; /* Shows it's interactive */
         }
     </style>
 </head>
@@ -75,10 +77,28 @@
     <!-- header end -->
 
     <div class="content">
-        <img src="image.png" alt="Centered Image">
+        <img src="image.png" alt="Centered Image" id="playButton">
     </div>
+
+    <!-- Audio -->
+    <audio id="preachermanAudio">
+        <source src="/assets/music/batb.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
 
     <script src="/assets/js/jquery-3.7.1.min.js"></script>
     <script src="/assets/js/main.js"></script>
+
+    <script>
+        document.getElementById("playButton").addEventListener("click", function () {
+            let audio = document.getElementById("preachermanAudio");
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+                audio.currentTime = 0; // Resets to start
+            }
+        });
+    </script>
 </body>
 </html>
