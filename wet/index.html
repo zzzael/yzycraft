@@ -3,11 +3,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="/assets/img/favicon/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
-    <link href="/assets/img/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
-    <link href="/assets/img/favicon/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png" />
-    <link href="/assets/img/favicon/apple-touch-icon.png" rel="shortcut icon" type="image/x-icon" />
-    <link href="/assets/img/favicon/site.html" rel="manifest" />
+    <!-- favicon -->
+    <link href="/fav.png" rel="apple-touch-icon" sizes="180x180" />
+    <link href="/fav.png" rel="icon" sizes="32x32" type="image/png" />
+    <link href="/fav.png" rel="icon" sizes="16x16" type="image/png" />
+    <link href="/fav.png" rel="shortcut icon" type="image/x-icon" />
     <link href="/assets/css/style.css" rel="stylesheet" />
     <title>YZYCRAFT.CO.UK</title>
     <meta name="description" content="" />
@@ -77,9 +77,24 @@
     <!-- header end -->
 
     <div class="content">
-        <img src="/wetanks.png" alt="Centered Image">
+        <img src="/femboys.png" alt="Centered Image"id="playButton">
     </div>
 
+    <audio id="wetMusic">
+        <source src="/bored.m4a" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <script>
+        document.getElementById("playButton").addEventListener("click", function () {
+            let audio = document.getElementById("wetMusic");
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+                audio.currentTime = 0; // Resets to start
+            }
+        });
+    </script>
     <script src="/assets/js/jquery-3.7.1.min.js"></script>
     <script src="/assets/js/main.js"></script>
 </body>
