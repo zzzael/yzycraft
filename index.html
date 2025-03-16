@@ -60,7 +60,7 @@
             <nav class="header-nav">
                 <a href="/" class="nav-link">home</a>
                 <a href="/enter/" class="nav-link">Enter</a>
-                <a href="/wet/" class="nav-link">wet</a>
+                <a href="/CHROMAKOPIA/" class="nav-link">CHROMAKOPIA</a>
                 <a href="/pglang/" class="nav-link">pglang</a>
                 <a href="/vultures/" class="nav-link">vultures</a>
             </nav>
@@ -69,12 +69,12 @@
     <!-- header end -->
 
     <div class="content">
-        <img src="muisc.png" alt="Centered Image" id="playButton">
+        <img src="/assets/img/POPOUT.png" alt="LET ME CRUSH!" id="playButton">
     </div>
 
     <!-- Audio -->
-    <audio id="preachermanAudio">
-        <source src="/assets/music/crush.m4a" type="audio/mpeg">
+    <audio id="pbc">
+        <source src="/assets/music/pop.m4a" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
 
@@ -83,7 +83,7 @@
 
     <script>
         document.getElementById("playButton").addEventListener("click", function () {
-            let audio = document.getElementById("preachermanAudio");
+            let audio = document.getElementById("pbc");
             if (audio.paused) {
                 audio.play();
             } else {

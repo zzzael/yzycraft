@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/mid.png" rel="apple-touch-icon" sizes="180x180" />
+    <link href="/mid.png" rel="icon" sizes="32x32" type="image/png" />
+    <link href="/mid.png" rel="icon" sizes="16x16" type="image/png" />
+    <link href="/mid.png" rel="shortcut icon" type="image/x-icon" />
+    <link href="/assets/css/style.css" rel="stylesheet" />
+    <title>YZYCRAFT.CO.UK</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            background-color: #F6F6F6;
+        }
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+            width: 100%;
+            max-width: 100vw;
+            max-height: 100vh;
+            padding: 10px;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            max-width: 90vw;
+            max-height: 90vh;
+            object-fit: contain;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-wrapper">
+            <button type="button" title="menu-toggle" class="menu-toggle">
+                <span class="menu-toggle-bar"></span>
+                <span class="menu-toggle-bar"></span>
+            </button>
+            <nav class="header-nav">
+                <a href="/" class="nav-link">home</a>
+                <a href="/enter/" class="nav-link">Enter</a>
+                <a href="/CHROMAKOPIA/" class="nav-link">CHROMAKOPIA</a>
+                <a href="/pglang/" class="nav-link">pglang</a>
+                <a href="/vultures/" class="nav-link">vultures</a>
+            </nav>
+        </div>
+    </header>
+    <div class="content">
+        <img src="/lostt.png" alt="Centered Image" id="playButton">
+    </div>
+    <audio id="CHROMAKOPIAMusic">
+        <source src="/bored.m4a" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <script>
+        const audio = document.getElementById("CHROMAKOPIAMusic");
+        const playButton = document.getElementById("playButton");
+
+        playButton.addEventListener("click", function () {
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+                audio.currentTime = 0;
+            }
+        });
+
+        audio.addEventListener("ended", function () {
+            window.location.href = "/";
+        });
+    </script>
+    <script src="/assets/js/jquery-3.7.1.min.js"></script>
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>
