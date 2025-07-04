@@ -1,96 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="/mid.png" rel="apple-touch-icon" sizes="180x180" />
-    <link href="/mid.png" rel="icon" sizes="32x32" type="image/png" />
-    <link href="/mid.png" rel="icon" sizes="16x16" type="image/png" />
-    <link href="/mid.png" rel="shortcut icon" type="image/x-icon" />
-    <link href="/assets/css/style.css" rel="stylesheet" />
-    <title>TOUR</title>
-    <meta itemprop="image" content="https://media.discordapp.net/attachments/1322979616503365662/1350585634301022328/image.png?ex=67d74663&is=67d5f4e3&hm=aabf69696b47bc5ab5857f1bbb0655b7f6e05e016325b9b1582dc51b9a907de9&=&format=webp&quality=lossless&width=1872&height=467" />
-    <meta property="og:type" content="website" />
-    <meta property="og:description" content="" />
-    <meta property="og:image" content="https://media.discordapp.net/attachments/1322979616503365662/1350585634301022328/image.png?ex=67d74663&is=67d5f4e3&hm=aabf69696b47bc5ab5857f1bbb0655b7f6e05e016325b9b1582dc51b9a907de9&=&format=webp&quality=lossless&width=1872&height=467" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content="https://media.discordapp.net/attachments/1322979616503365662/1350585634301022328/image.png?ex=67d74663&is=67d5f4e3&hm=aabf69696b47bc5ab5857f1bbb0655b7f6e05e016325b9b1582dc51b9a907de9&=&format=webp&quality=lossless&width=1872&height=467" />
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.png" type="image/png" sizes="64x64">
+    <title>MINEKOPIA TOUR</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
         body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            height: 100vh;
-            background-color: #F6F6F6;
-        }
-        .content {
+            margin: 0;
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-grow: 1;
-            width: 100%;
-            max-width: 100vw;
-            max-height: 100vh;
-            padding: 10px; /* Prevents image from touching edges */
+            height: 100vh;
+            background-color: #027836;
         }
         img {
-            width: 100%;
-            height: 100%;
-            max-width: 90vw;
-            max-height: 90vh;
-            object-fit: contain; /* Ensures no distortion */
-            cursor: pointer; /* Shows it's interactive */
+            display: block;
+            max-width: 60%;
+            max-height: 48vh;
+            object-fit: contain;
+            margin: 0 auto;
         }
     </style>
 </head>
 <body>
-    <!-- header start -->
-    <header class="header">
-        <div class="header-wrapper">
-            <button type="button" title="menu-toggle" class="menu-toggle">
-                <span class="menu-toggle-bar"></span>
-                <span class="menu-toggle-bar"></span>
-            </button>
-            <nav class="header-nav">
-                <a href="/" class="nav-link">home</a>
-                <a href="/enter/" class="nav-link">Enter</a>
-                <a href="/donda/" class="nav-link">donda</a>
-                <a href="/pglang/" class="nav-link">pglang</a>
-                <a href="/vultures/" class="nav-link">vultures</a>
-            </nav>
-        </div>
-    </header>
-    <!-- header end -->
-
-    <div class="content">
-        <img src="/assets/img/ready.png" alt="donda" id="playButton">
-    </div>
-
-    <!-- Audio -->
-    <audio id="pbc">
-        <source src="/assets/music/bal.m4a" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
-
-    <script src="/assets/js/jquery-3.7.1.min.js"></script>
-    <script src="/assets/js/main.js"></script>
-
-    <script>
-        document.getElementById("playButton").addEventListener("click", function () {
-            let audio = document.getElementById("pbc");
-            if (audio.paused) {
-                audio.play();
-            } else {
-                audio.pause();
-                audio.currentTime = 0; // Resets to start
-            }
-        });
-    </script>
+    <img src="tour.png" alt="MineKopia Tour">
 </body>
 </html>
