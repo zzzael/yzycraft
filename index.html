@@ -1,29 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="favicon.png" type="image/png" sizes="64x64">
-    <title>MINEKOPIA TOUR</title>
-    <style>
-        body {
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #027836;
-        }
-        img {
-            display: block;
-            max-width: 60%;
-            max-height: 48vh;
-            object-fit: contain;
-            margin: 0 auto;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GOLF - MINEKOPIA</title>
+  <link rel="icon" type="image/png" href="favi.png">
+  <link rel="stylesheet" href="/style.css">
+    <meta itemprop="image" content="https://media.discordapp.net/attachments/1322979616503365662/1390810273501155388/inside.png?ex=68699c81&is=68684b01&hm=2be3b03e8fa87bddfd8cadb247581af5d23922f45f736c9d7f81f614f08ac780&=&format=webp&quality=lossless&width=1376&height=943" />
+    <meta property="og:image" content="https://media.discordapp.net/attachments/1322979616503365662/1390810273501155388/inside.png?ex=68699c81&is=68684b01&hm=2be3b03e8fa87bddfd8cadb247581af5d23922f45f736c9d7f81f614f08ac780&=&format=webp&quality=lossless&width=1376&height=943" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://media.discordapp.net/attachments/1322979616503365662/1390810273501155388/inside.png?ex=68699c81&is=68684b01&hm=2be3b03e8fa87bddfd8cadb247581af5d23922f45f736c9d7f81f614f08ac780&=&format=webp&quality=lossless&width=1376&height=943" />
+  <style>
+    .main-header {
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 0;
+      border-bottom: none;
+      font-size: 1.3em;
+    } 
+    .main-nav {
+      justify-content: center;
+      margin-top: 13px;
+      gap: 46.8px;
+      font-size: 1.3em;
+    }
+    /* Make header and nav bigger only on small screens */
+    @media only screen and (max-width: 600px) {
+      .main-header, .main-nav {
+        font-size: 2em;
+      }
+    }
+    .golf-logo {
+      background: none;
+      padding: 0;
+      margin: 0 23.4px;
+      display: flex;
+      align-items: center;
+    }
+    .golf-logo img {
+      height: 49.4px;
+      width: auto;
+      display: block;
+      margin-top: 0;
+      object-fit: unset;
+    }
+    .golf-undertext {
+      background: none;
+      margin-bottom: 2.6px;
+      margin-top: 0px;
+      display: flex;
+      align-items: center;
+    }
+    .golf-undertext img {
+      height: 14.3px;
+      width: auto;
+      display: block;
+    }
+    .product-details h1 {
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+      font-weight: bolder;
+      margin: 0 0 10px 0;
+      letter-spacing: 0.5px;
+    }
+    .product-details {
+      margin-top: 80px;
+    }
+    .byline {
+      color: #000;
+      font-size: 12px;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+    .box-includes {
+      font-size: 12px;
+      font-weight: bold;
+      font-family: Arial, sans-serif;
+      margin-bottom: 8px;
+    }
+    .qty-note {
+      font-size: 12px;
+      font-weight: bold;
+      font-family: Arial, sans-serif;
+      margin-bottom: 8px;
+    }
+    .product-main {
+      justify-content: center;
+      flex-direction: row;
+    }
+    .add-to-cart {
+      background: #000;
+      color: #fff;
+      font-weight: bold;
+      font-size: 0.823em;
+      border: none;
+      border-radius: 0;
+      padding: 9.6px 0;
+      margin-bottom: 14.4px;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+      width: 30%;
+      min-width: 92.4px;
+      max-width: 151.2px;
+      display: inline-block;
+      margin-left: 0;
+      margin-right: 0;
+    }
+    .add-to-cart:hover {
+      background: #FED925;
+      color: #111;
+    }
+
+    .main-nav a {
+      text-decoration: none;
+      transition: text-decoration 0.2s;
+    }
+    .main-nav a:hover {
+      text-decoration: underline;
+      color: inherit;
+      background: none;
+    }
+    .main-nav .golf-logo:hover {
+      text-decoration: none;
+      background: none;
+    }
+
+    @media (max-width: 900px) {
+      .product-main {
+        flex-direction: column;
+        align-items: center;
+      }
+      .product-gallery, .product-details {
+        max-width: 100%;
+      }
+      .product-details {
+        margin-top: 40px;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    /* iPhone and small devices: stack, center image, move description below */
+    @media only screen and (max-width: 600px) {
+      .product-main {
+        flex-direction: column;
+        align-items: center;
+      }
+      .product-gallery {
+        order: 1;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+      }
+      .product-gallery .main-image {
+        margin: 64px auto 0 auto;
+        display: flex;
+        justify-content: center;
+      }
+      .product-details {
+        order: 2;
+        margin-top: 32px;
+        width: 100%;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+      }
+      /* Hide header text, show only logo in nav */
+      .main-nav a {
+        display: none !important;
+      }
+      .golf-logo {
+        margin: 0 auto !important;
+        justify-content: center;
+        width: 100%;
+      }
+      .main-nav {
+        justify-content: center !important;
+        gap: 0 !important;
+      }
+    }
+
+    /* iPhone specific: move description under image */
+    @media only screen and (max-width: 600px) and (orientation: portrait) {
+      .product-main {
+        flex-direction: column;
+      }
+      .product-gallery {
+        order: 1;
+      }
+      .product-details {
+        order: 2;
+        margin-top: 24px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <img src="pullingoutyourhair.png" alt="MineKopia Tour">
+  <header class="main-header">
+    <nav class="main-nav">
+      <a href="#">SHOP</a>
+      <a href="#">BOOK</a>
+      <span class="golf-logo"><img src="golf1.png" alt="GOLF logo"></span>
+      <a href="#">TOUR</a>
+      <a href="#">RETAIL</a>
+    </nav>
+  </header>
+  <main class="product-main">
+    <section class="product-gallery">
+      <div class="main-image" style="height: 403px; margin-top: -40px;"><img src="id.png" alt="Main Product" style="max-width:145%;max-height:145%;display:block;margin:auto;"></div>
+    </section>
+    <section class="product-details">
+      <h1>MINEKOPIA LISTENING PARTY</h1>
+      <div class="golf-undertext"><img src="pride.png" alt="GOLF logo"></div>
+      <div class="byline">Tyler, The Creator™</div>
+      <div class="box-includes">
+        <strong>TICKET INCLUDES:</strong><br>
+        - MINEKOPIA LIMITED EDITION DISC<br>
+        - MINEKOPIA ARMOR PLATE<br>
+        - 12" x 18" POSTER<br>
+        - NOLIFENIK (FEMBOY DOLL)
+      </div>
+      <div class="qty-note">DATE IS TO BE DECIDED. NON-REFUNDABLE. <span class="all-sales">ALL SALES ARE FINAL.</span></div>
+      <div class="price">$0 USD</div>
+      <!-- Product select and thumb removed -->
+      <button class="add-to-cart" id="register-btn" onclick="this.innerText='THANK YOU!'; this.disabled=true;">REGISTER INTEREST</button>
+      <!-- fit details and tracklist removed -->
+    </section>
+  </main>
 </body>
 </html>
